@@ -21,6 +21,6 @@ export const handleTomorrow = async (chatId: number, bot: TelegramBot) => {
   date.setDate(date.getDate() + 1);
   const formattedDate = date.toLocaleDateString("en-GB", { year: "numeric", day: "2-digit", month: "long" });
 
-  const responseMessage = `Shift fot tomorrow: \n📌Date: ${formattedDate}` + `\n🧑‍💻Name: ${username}` + `\n⚡Shift: ${status}`;
+  const responseMessage = `Shift for tomorrow: \n📌Date: ${formattedDate}` + `\n🧑‍💻Name: ${username}` + `\n⚡Shift: ${status}`;
   return await bot.sendMessage(chatId, responseMessage);
 };
